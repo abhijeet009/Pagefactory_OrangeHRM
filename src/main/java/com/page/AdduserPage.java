@@ -1,14 +1,20 @@
 package com.page;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class AdduserPage {
 	
 	WebDriver driver;
+	public AdduserPage(WebDriver driver)
+	{
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
 	public static final Logger logger=Logger.getLogger(LoginPage.class.getName());
 	@FindBy(id = "menu_pim_viewPimModule")
 	WebElement pimMod;
@@ -68,5 +74,4 @@ public class AdduserPage {
 		Thread.sleep(1500);
 		clickbtnSave.click();
 	}
-	
 }

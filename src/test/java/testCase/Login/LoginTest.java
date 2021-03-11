@@ -21,19 +21,16 @@ public class LoginTest extends TestBase {
 	}
 	
 	@Test(priority=1) 
-	
 	 public void verifyLoginWithCreadentials() throws InterruptedException
 	 {  
 		Properties properties=getProp();
 		String username=properties.getProperty("AdminUname");
+		System.out.println(username);
 		String password=properties.getProperty("Adminpasswd");
+		System.out.println(password);
 		loginP = new LoginPage(driver);
 		loginP.loginOperation(username,password);
 
 	 }
-	@AfterTest
-	private void pu() {
-		// TODO Auto-generated method stub
-		driver.quit();
-	}
+	
 }

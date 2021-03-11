@@ -1,11 +1,12 @@
 package com.page;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
+
 
 public class LoginPage {
 	
@@ -34,10 +35,10 @@ public class LoginPage {
 		adminUserName.sendKeys(DynamicUserName);
 		logger.info("Added User Name is -->"+adminUserName);
 		adminPass.sendKeys(DynamicadminPass);
-		Thread.sleep(10000);
+		Thread.sleep(1000);
 		logger.info("Added password is -->"+adminPass);
 		btnLogin.click();
-		Thread.sleep(10000);
+		Thread.sleep(100);
 		//Assert.assertEquals(actual, expected);
 		if(dashAssert.isDisplayed())
 		{

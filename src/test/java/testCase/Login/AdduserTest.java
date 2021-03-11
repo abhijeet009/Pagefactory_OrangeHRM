@@ -13,8 +13,7 @@ public class AdduserTest extends TestBase {
 	AdduserPage addP;
 	
 	@Test(priority=1) 
-	private void AddEmloyee() {
-		// TODO Auto-generated method stub
+	private void AddEmloyee() throws InterruptedException {
 		Properties properties=getProp();
 		String addFname = properties.getProperty("firstName");
 		String addMname = properties.getProperty("middleName");
@@ -23,7 +22,7 @@ public class AdduserTest extends TestBase {
 		String upass= properties.getProperty("accUserPassword");
 		String cuPass= properties.getProperty("accRePassword");
 		
-		//addP.createEmployee(addFname, addMname, addLname, uname, upass, cuPass);
+		addP.createEmployee(addFname, addMname, addLname, uname, upass, cuPass);
 		
 	}
 }

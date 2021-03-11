@@ -1,11 +1,12 @@
 package com.page;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AssignRole {
+public class AssignRole  {
+	
 	WebDriver driver;
 	public static final Logger logger=Logger.getLogger(LoginPage.class.getName());
 	
