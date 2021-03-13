@@ -20,7 +20,7 @@ public class LoginTest extends TestBase {
 	getDriver();
 	}
 	
-	@Test(priority=1) 
+	@Test 
 	 public void verifyLoginWithCreadentials() throws InterruptedException
 	 {  
 		Properties properties=getProp();

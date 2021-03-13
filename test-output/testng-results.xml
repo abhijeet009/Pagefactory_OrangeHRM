@@ -2,15 +2,21 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25669" started-at="2021-03-11T15:24:03 IST" finished-at="2021-03-11T15:24:29 IST">
+  <suite name="Login" duration-ms="49087" started-at="2021-03-12T15:44:39 IST" finished-at="2021-03-12T15:45:28 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25669" started-at="2021-03-11T15:24:03 IST" finished-at="2021-03-11T15:24:29 IST">
+    <test name="Login Test" duration-ms="49087" started-at="2021-03-12T15:44:39 IST" finished-at="2021-03-12T15:45:28 IST">
       <class name="testCase.Login.AdduserTest">
-        <test-method status="FAIL" signature="AddEmloyee()[pri:1, instance:testCase.Login.AdduserTest@68e5eea7]" name="AddEmloyee" duration-ms="15" started-at="2021-03-11T15:24:19 IST" finished-at="2021-03-11T15:24:19 IST">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="AddEmloyee()[pri:0, instance:testCase.Login.AdduserTest@4b53f538]" name="AddEmloyee" duration-ms="1505" started-at="2021-03-12T15:45:26 IST" finished-at="2021-03-12T15:45:28 IST">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Driver must be set]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
+              <![CDATA[java.lang.IllegalArgumentException: Driver must be set
+at org.openqa.selenium.internal.Require.nonNull(Require.java:56)
+at org.openqa.selenium.interactions.Actions.<init>(Actions.java:67)
+at com.page.AdduserPage.createEmployee(AdduserPage.java:57)
 at testCase.Login.AdduserTest.AddEmloyee(AdduserTest.java:25)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -42,21 +48,21 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddEmloyee -->
       </class> <!-- testCase.Login.AdduserTest -->
       <class name="testCase.Login.LoginTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testCase.Login.LoginTest@671a5887]" name="beforeTest" is-config="true" duration-ms="15987" started-at="2021-03-11T15:24:03 IST" finished-at="2021-03-11T15:24:19 IST">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testCase.Login.LoginTest@1060b431]" name="beforeTest" is-config="true" duration-ms="29369" started-at="2021-03-12T15:44:39 IST" finished-at="2021-03-12T15:45:08 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="verifyLoginWithCreadentials()[pri:1, instance:testCase.Login.LoginTest@671a5887]" name="verifyLoginWithCreadentials" duration-ms="9525" started-at="2021-03-11T15:24:19 IST" finished-at="2021-03-11T15:24:29 IST">
+        <test-method status="PASS" signature="verifyLoginWithCreadentials()[pri:0, instance:testCase.Login.LoginTest@1060b431]" name="verifyLoginWithCreadentials" duration-ms="18164" started-at="2021-03-12T15:45:08 IST" finished-at="2021-03-12T15:45:26 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginWithCreadentials -->
       </class> <!-- testCase.Login.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Login Test -->
+  </suite> <!-- Login -->
 </testng-results>

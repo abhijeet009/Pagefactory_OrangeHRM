@@ -10,9 +10,9 @@ import com.testBase.TestBase;
 
 public class AdduserTest extends TestBase {
 
-	AdduserPage addP;
+	AdduserPage addP= new AdduserPage(driver);
 	
-	@Test(priority=1) 
+	@Test 
 	private void AddEmloyee() throws InterruptedException {
 		Properties properties=getProp();
 		String addFname = properties.getProperty("firstName");

@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Login]">
   <test thread-count="5" name="Login Test(failed)">
     <classes>
-      <class name="testCase.Login.LoginTest">
+      <class name="testCase.Login.AdduserTest">
         <methods>
-          <include name="verifyLoginWithCreadentials"/>
-          <include name="beforeTest"/>
+          <include name="AddEmloyee"/>
         </methods>
-      </class> <!-- testCase.Login.LoginTest -->
+      </class> <!-- testCase.Login.AdduserTest -->
     </classes>
   </test> <!-- Login Test(failed) -->
 </suite> <!-- Failed suite [Login] -->

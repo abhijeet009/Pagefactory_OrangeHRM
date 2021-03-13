@@ -4,8 +4,8 @@
 
 <test name="Login Test" >
     <classes>
-      <class name="com.page.LoginPage" />
-        <class name="com.page.AdduserPage" />
+      <class name="testCase.Login.LoginTest" />
+        <class name="testCase.Login.AdduserTest" />
       </classes>
   </test> 
 </suite>
