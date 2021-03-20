@@ -2,16 +2,17 @@ package com.page;
 
 import java.util.logging.Logger;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.testBase.TestBase;
 
-public class LoginPage {
+
+public class LoginPage extends TestBase{
 	
 
-	WebDriver driver;
+	
 	public static final Logger logger=Logger.getLogger(LoginPage.class.getName());
 	
 	@FindBy(id="txtUsername")
@@ -25,12 +26,15 @@ public class LoginPage {
 	
 	@FindBy(id = "menu_dashboard_index")
 	WebElement dashAssert;
-	public LoginPage(WebDriver driver)
+	
+
+	
+	public LoginPage()
 	{
-		this.driver=driver;
+		
 		PageFactory.initElements(driver, this);
 	}
-	public void loginOperation (String DynamicUserName,String DynamicadminPass) throws InterruptedException {
+	public AdduserPage loginOperation (String DynamicUserName,String DynamicadminPass) throws InterruptedException {
 		Thread.sleep(1500);
 		adminUserName.sendKeys(DynamicUserName);
 		logger.info("Added User Name is -->"+adminUserName);
@@ -38,13 +42,16 @@ public class LoginPage {
 		Thread.sleep(1000);
 		logger.info("Added password is -->"+adminPass);
 		btnLogin.click();
-		Thread.sleep(100);
+		Thread.sleep(1500);
 		//Assert.assertEquals(actual, expected);
 		if(dashAssert.isDisplayed())
 		{
 			logger.info("login sucess");
 		}
 		logger.info("Admin login is success...");
-		Thread.sleep(1500);
+		Thread.sleep(5000);
+	
+		
+		return new AdduserPage();
 	}
 }
