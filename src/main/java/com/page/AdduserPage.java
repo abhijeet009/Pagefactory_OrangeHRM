@@ -89,7 +89,7 @@ public class AdduserPage extends TestBase {
 	@FindBy(id = "personal_DOB")
 	WebElement eDOB;
 	
-	@FindBy(id = "btnSave")
+	@FindBy(xpath = "//input[@id='btnSave']")
 	WebElement save;
 	
 	@FindBy(xpath = "//ul[@id='sidenav']//a[contains(text(),'Job')]")
@@ -98,10 +98,10 @@ public class AdduserPage extends TestBase {
 	@FindBy(xpath = "//input[@value='Edit' and @id='btnSave']")
 	WebElement ejob;
 	
-	@FindBy(id ="job_job_title")
+	@FindBy(xpath ="//select[@id='job_job_title']")
 	WebElement jobTitle;
 	
-	@FindBy(id ="//option[normalize-space()='QA Lead']")
+	@FindBy(xpath ="//option[normalize-space()='QA Lead']")
 	WebElement selecQAL;
 	
 	@FindBy(id="//input[@id='btnSave']")
@@ -145,9 +145,11 @@ public class AdduserPage extends TestBase {
 			Thread.sleep(3000);
 			
 			clickbtnSave.click();
+			
+			Thread.sleep(3000);
 			editPdetail.click();
 			
-			if(gender.equals("male"))
+			if(gender.equals("Male"))
 			{
 				male.click();
 				logger.info("Updated as"+gender);
@@ -163,13 +165,15 @@ public class AdduserPage extends TestBase {
 			
 			
 			Select maritial = new Select(openDMstatus);
+			openDMstatus.click();
 			maritial.selectByVisibleText(mStatus);
 			
 			Select country = new Select(nationality);
+			nationality.click();
 			country.selectByVisibleText(sNationality);
-			
+			eDOB.clear();
 			eDOB.sendKeys(dateObirth);
-			
+			Thread.sleep(3000);
 			save.click();
 			Thread.sleep(3000);
 		} catch (Throwable e) {
@@ -183,8 +187,13 @@ public class AdduserPage extends TestBase {
 		job.click();
 		ejob.click();
 		Select sjobTitle = new Select(jobTitle);
-		sjobTitle.selectByVisibleText(Jtitle);
-		saveJob.click();
+		Thread.sleep(3000);
+		jobTitle.click();
+		
+		String job = selecQAL.getText();
+		System.out.println("Job is "+job);
+		sjobTitle.selectByVisibleText(job);
+	//	saveJob.click();
 		
 	}
 	

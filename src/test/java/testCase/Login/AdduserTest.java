@@ -47,7 +47,7 @@ public class AdduserTest extends TestBase {
 		String cuPass = prop.getProperty("accRePassword");
 		String gender= prop.getProperty("gender");
 		String mStatus= prop.getProperty("maritial");
-		String sNationality= prop.getProperty("Indian");
+		String sNationality= prop.getProperty("nationality");
 		String dateObirth= prop.getProperty("dob");
 		try {
 			//addP.createEmployee(prop.getProperty("firstName"), prop.getProperty("middleName"), prop.getProperty("lastName"), prop.getProperty("accUserName"), prop.getProperty("accUserPassword"), prop.getProperty("accRePassword"));

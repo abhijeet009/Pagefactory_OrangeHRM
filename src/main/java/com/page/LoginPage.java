@@ -31,7 +31,6 @@ public class LoginPage extends TestBase{
 	
 	public LoginPage()
 	{
-		
 		PageFactory.initElements(driver, this);
 	}
 	public AdduserPage loginOperation (String DynamicUserName,String DynamicadminPass) throws InterruptedException {
