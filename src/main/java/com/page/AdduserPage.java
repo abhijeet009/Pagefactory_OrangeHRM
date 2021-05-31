@@ -103,7 +103,7 @@ public class AdduserPage extends TestBase {
 	@FindBy(xpath = "//option[normalize-space()='QA Lead']")
 	WebElement selecQAL;
 
-	@FindBy(id = "//input[@id='btnSave']")
+	@FindBy(xpath = "//input[@id='btnSave']")
 	WebElement saveJob;
 
 	public void navigateToempinfo() throws InterruptedException {
@@ -184,12 +184,11 @@ public class AdduserPage extends TestBase {
 		Select sjobTitle = new Select(jobTitle);
 		Thread.sleep(3000);
 		jobTitle.click();
-
 		String job = selecQAL.getText();
 		System.out.println("Job is " + job);
 		sjobTitle.selectByVisibleText(job);
 		saveJob.click();
-
+		driver.quit();
 	}
 
 }

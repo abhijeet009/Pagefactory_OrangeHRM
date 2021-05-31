@@ -1,5 +1,6 @@
 package testCase.Login;
 
+import org.junit.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -33,7 +34,7 @@ public class AdduserTest extends TestBase {
 	}
 
 	@Test(priority = 2)
-	private void AddEmloyee() throws InterruptedException {
+	public  void AddEmloyee() throws InterruptedException {
 
 		String addFname = prop.getProperty("firstName");
 		String addMname = prop.getProperty("middleName");
@@ -56,9 +57,13 @@ public class AdduserTest extends TestBase {
 	}
 
 	@Test(priority = 3)
-	private void addJobDetails() throws InterruptedException {
+	public void addJobDetails() throws InterruptedException {
 		String job = prop.getProperty("job");
 		addP.addJobDetals(job);
-
+	}
+	
+	@AfterClass
+	public void exit_class() {
+		driver.quit();
 	}
 }

@@ -6,7 +6,7 @@
       <class name="testCase.Login.AdduserTest">
         <methods>
           <include name="setup"/>
-          <include name="navigateToemp"/>
+          <include name="addJobDetails"/>
         </methods>
       </class> <!-- testCase.Login.AdduserTest -->
     </classes>

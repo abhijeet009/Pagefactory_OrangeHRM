@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="93639" started-at="2021-03-23T21:34:59 IST" finished-at="2021-03-23T21:36:32 IST">
+  <suite name="Login" duration-ms="96388" started-at="2021-05-31T11:53:55 IST" finished-at="2021-05-31T11:55:31 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="93639" started-at="2021-03-23T21:34:59 IST" finished-at="2021-03-23T21:36:32 IST">
+    <test name="Login Test" duration-ms="96388" started-at="2021-05-31T11:53:55 IST" finished-at="2021-05-31T11:55:31 IST">
       <class name="testCase.Login.AdduserTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:testCase.Login.AdduserTest@612fc6eb]" name="setup" is-config="true" duration-ms="38797" started-at="2021-03-23T21:34:59 IST" finished-at="2021-03-23T21:35:37 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testCase.Login.AdduserTest@74ad1f1f]" name="setup" is-config="true" duration-ms="38938" started-at="2021-05-31T11:53:55 IST" finished-at="2021-05-31T11:54:34 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="navigateToemp()[pri:0, instance:testCase.Login.AdduserTest@612fc6eb]" name="navigateToemp" duration-ms="11898" started-at="2021-03-23T21:35:37 IST" finished-at="2021-03-23T21:35:49 IST">
+        <test-method status="PASS" signature="navigateToemp()[pri:0, instance:testCase.Login.AdduserTest@74ad1f1f]" name="navigateToemp" duration-ms="11756" started-at="2021-05-31T11:54:34 IST" finished-at="2021-05-31T11:54:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToemp -->
-        <test-method status="PASS" signature="verifyNavigation()[pri:1, instance:testCase.Login.AdduserTest@612fc6eb]" name="verifyNavigation" duration-ms="38" started-at="2021-03-23T21:35:49 IST" finished-at="2021-03-23T21:35:49 IST">
+        <test-method status="PASS" signature="verifyNavigation()[pri:1, instance:testCase.Login.AdduserTest@74ad1f1f]" name="verifyNavigation" duration-ms="56" started-at="2021-05-31T11:54:46 IST" finished-at="2021-05-31T11:54:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNavigation -->
-        <test-method status="PASS" signature="AddEmloyee()[pri:2, instance:testCase.Login.AdduserTest@612fc6eb]" name="AddEmloyee" duration-ms="35416" started-at="2021-03-23T21:35:49 IST" finished-at="2021-03-23T21:36:25 IST">
+        <test-method status="PASS" signature="AddEmloyee()[pri:2, instance:testCase.Login.AdduserTest@74ad1f1f]" name="AddEmloyee" duration-ms="35988" started-at="2021-05-31T11:54:46 IST" finished-at="2021-05-31T11:55:22 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddEmloyee -->
-        <test-method status="PASS" signature="addJobDetails()[pri:3, instance:testCase.Login.AdduserTest@612fc6eb]" name="addJobDetails" duration-ms="7442" started-at="2021-03-23T21:36:25 IST" finished-at="2021-03-23T21:36:32 IST">
+        <test-method status="PASS" signature="addJobDetails()[pri:3, instance:testCase.Login.AdduserTest@74ad1f1f]" name="addJobDetails" duration-ms="9596" started-at="2021-05-31T11:55:22 IST" finished-at="2021-05-31T11:55:31 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addJobDetails -->
       </class> <!-- testCase.Login.AdduserTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Login Test -->
+  </suite> <!-- Login -->
 </testng-results>
