@@ -7,7 +7,10 @@ import java.io.IOException;
 import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 
@@ -39,12 +42,14 @@ public class TestBase {
 	@SuppressWarnings("deprecation")
 	public void getDriver() {
 
+		//removed dedicated version folder and fileis still there if you need to use
 		
-		String chromeDriverPath = System.getProperty("user.dir") + "\\src\\main\\resources\\driverFiles\\"
-				+ prop.getProperty("chrome.driver.path");
-		System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-		System.out.println(chromeDriverPath);
-		driver = new ChromeDriver();
+		//String chromeDriverPath = System.getProperty("user.dir") + "\\src\\main\\resources\\driverFiles\\"+ prop.getProperty("chrome.driver.path");
+		//System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+		ChromeOptions chromeOptions = new ChromeOptions();
+		WebDriverManager.chromedriver().setup();
+		//System.out.println(chromeDriverPath);
+		driver = new ChromeDriver(chromeOptions);
 		
 		e_driver = new EventFiringWebDriver(driver);
 		// Now create object of EventListerHandler to register it with EventFiringWebDriver
